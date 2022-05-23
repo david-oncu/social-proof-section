@@ -1,0 +1,233 @@
+:root{
+
+        
+    font-size: 15px;
+
+    --clr-dark-primary: hsl(300, 43%, 22%);
+    --clr-light-primary: hsl(333, 80%, 67%);
+
+
+    --clr-dark-gray: hsl(303, 10%, 53%);
+    --clr-light-gray: hsl(300, 24%, 96%);
+    --clr-white: hsl(0, 0%, 100%);
+    
+    --fw-light: 400;
+    --fw-normal: 500;
+    --fw-bold: 700;
+
+    --min-width: 25rem;
+    --max-width: 96rem;
+}
+
+
+/*null*/
+*,
+*::before,
+*::after{
+    padding: 0; margin:0; box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Spartan', sans-serif;
+}
+
+.main-container{
+    padding: 3rem 2rem;
+    background-image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom left;
+    background-size: contain;
+
+}
+
+
+.main-container__top-row{
+    text-align: center;
+}
+
+
+.main-title{
+    color: var(--clr-dark-primary);
+    font-size: 2.2rem;
+}
+
+.main-description{
+    color: var(--clr-dark-gray);
+    padding-block: 2rem 0;
+}
+
+.main-text{
+    padding: 1rem;
+}
+
+.review-star-card-container{
+    padding-block: 2rem;
+}
+
+.review-star-card{
+    text-align: center;
+    color:hsl(300, 43%, 22%);
+    font-weight: var(--fw-bold);
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 0.5rem;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    margin-block: 1rem;
+}
+
+.review-star-card-text{
+    font-size: 1rem;
+    padding-top: 0.7rem;
+}
+
+.review-card{
+    background-color: var(--clr-dark-primary);
+    color: var(--clr-white);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-block: 1rem;
+    font-size: 0.9rem;
+}
+
+.review-card-split{
+    display: flex;
+    padding-block: 1rem;
+}
+
+.review-card-split-col-left{
+    display: flex;
+    justify-content: center;
+}
+
+.review-card-split-text{
+    display: block;
+    align-self: center;
+}
+
+.review-card-name{
+    font-size: 1rem;
+}
+
+.review-card-subtitle{
+    color: var(--clr-light-primary);
+}
+
+.review-card-split-img{
+    display: block;
+    border-radius: 100%;
+    object-fit: contain;
+    width: 60%;
+    aspect-ratio: 1;
+    align-self: center;
+
+}
+
+.review-card-comment{
+    line-height: 1.5rem;
+}
+
+@media screen and (min-width:65rem) { 
+    
+    
+
+    .main-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 5rem;
+        
+    }
+
+    .main-container__top-row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: left;
+    gap: 5rem;
+    padding-bottom: 2rem;
+    }
+
+    .main-container__top-row > :nth-child(1){
+        grid-column: 1 / 3;
+    }
+
+    .main-container__top-row > :nth-child(2){
+        grid-column:  4;
+    }
+
+
+    .main-container__bottom-row{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .main-title{
+        font-size: 3rem;
+    }
+
+    .main-description{
+        
+        line-height: 1.5rem;
+    }
+
+    .review-star-card{
+        display: flex;
+        width: max-content;
+        padding: 0 2rem;
+    }
+
+    
+
+    .review-star-card-container{
+        width: 100%;
+    }
+
+
+    .review-star-card img{
+        display: block;
+        align-self: center;
+        height: 100%;
+        padding-inline: 0.3rem;
+    }
+
+    
+    .review-star-card-text{
+        padding-left: 2rem;
+        display: grid;
+        place-items: center;
+        height: 100%;
+        padding-block: 0.5rem;
+    }
+    
+
+    .review-star-card-1{
+        margin-inline: 3rem;
+    }
+    .review-star-card-2{
+        margin-inline: 6rem 0;
+    }
+
+    .review-star-card{
+        padding-block: 0.8rem;
+    }
+
+
+    .review-card{
+        height: fit-content;
+    }
+    
+    .review-card:nth-child(2){
+        margin-top: 2rem;
+
+    }
+    .review-card:nth-child(3){
+        margin-top: 4rem;
+
+    }
+    
+    .main-container{
+        background-image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+        background-position: top left, bottom right;
+        background-size: auto;
+
+    }
+}
